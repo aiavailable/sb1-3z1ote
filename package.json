@@ -1,0 +1,11 @@
+{
+  "name": "ai-token-monitor",
+  "version": "1.0.0",
+  "description": "Chrome extension to monitor OpenAI and Anthropic API token usage",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp -r manifest.json popup.html styles.css popup.js background.js icons dist/"
+  },
+  "author": "",
+  "license": "MIT"
+}

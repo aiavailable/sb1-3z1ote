@@ -1,0 +1,303 @@
+/* Base styles */
+body {
+  width: 400px;
+  margin: 0;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.container {
+  width: 100%;
+}
+
+/* Header */
+.header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #f3f4f6;
+}
+
+/* Status messages */
+.status {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.status.success {
+  background: #065f46;
+  color: #d1fae5;
+}
+
+.status.error {
+  background: #991b1b;
+  color: #fee2e2;
+}
+
+/* Provider Selection */
+.provider-select {
+  margin-bottom: 20px;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 8px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+.tab-btn.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Provider Tabs */
+.provider-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.provider-tab {
+  background: transparent;
+  border: 1px solid #374151;
+  color: #9ca3af;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.provider-tab:hover {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+.provider-tab.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* Settings Form */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #374151;
+  border-radius: 4px;
+  background: #1f2937;
+  color: #f3f4f6;
+  font-size: 0.9rem;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.save-btn:hover {
+  background: #2563eb;
+}
+
+/* Usage Cards */
+.usage-card {
+  background: #1f2937;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.usage-card h3 {
+  margin: 0 0 12px 0;
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+.usage-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #f3f4f6;
+}
+
+/* Rate Limits Tab */
+.limits-header {
+  margin-bottom: 24px;
+}
+
+.tier-badge {
+  background: #7c3aed;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-left: 8px;
+}
+
+.limits-description {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.limits-table {
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.limits-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.limits-table th,
+.limits-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.limits-table th {
+  background: #2d2d2d;
+  color: #a0aec0;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.limits-table td {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.batch-requests {
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.batch-requests h3 {
+  color: #e2e8f0;
+  font-size: 1rem;
+  margin: 0 0 4px 0;
+}
+
+.batch-requests p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0 0 8px 0;
+}
+
+.batch-limit {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.custom-limits {
+  background: #2d2d2d;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.custom-limits-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.custom-limits h3 {
+  color: #a0aec0;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.custom-limits p {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.contact-sales {
+  background: #c2410c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background-color 0.2s;
+}
+
+.contact-sales:hover {
+  background: #9a3412;
+}

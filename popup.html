@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Anthropic Token Monitor</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Anthropic Token Monitor</h1>
+      <div id="status" class="status"></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="settings">Settings</button>
+      <button class="tab-btn" data-tab="usage">Usage</button>
+      <button class="tab-btn" data-tab="details">Details</button>
+      <button class="tab-btn" data-tab="limits">Limits</button>
+    </div>
+
+    <div id="settings" class="tab-content">
+      <form id="settings-form">
+        <div class="form-group">
+          <label for="anthropic-key">Anthropic API Key</label>
+          <input type="password" id="anthropic-key" placeholder="sk-ant-..." required>
+        </div>
+        <button type="submit" class="save-btn">Save Settings</button>
+      </form>
+    </div>
+
+    <div id="usage" class="tab-content" style="display: none;">
+      <div class="usage-card">
+        <h3>Anthropic Usage</h3>
+        <div class="usage-stats">
+          <div id="anthropic-tokens">0 tokens</div>
+          <div id="anthropic-cost">$0.00</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="details" class="tab-content" style="display: none;">
+      <div class="details-content">
+        <h3>Usage Details</h3>
+        <div id="usage-chart"></div>
+      </div>
+    </div>
+
+    <div id="limits" class="tab-content" style="display: none;">
+      <div class="limits-header">
+        <h2>Rate Limits <span id="anthropic-tier" class="tier-badge">Loading...</span></h2>
+        <p class="limits-description">Limits help us mitigate against misuse and manage API capacity. Rate limits restrict API usage frequency over a certain period of time.</p>
+      </div>
+
+      <div class="limits-table">
+        <table>
+          <thead>
+            <tr>
+              <th>MODEL</th>
+              <th>REQUESTS PER MINUTE</th>
+              <th>TOKENS PER MINUTE</th>
+              <th>TOKENS PER DAY</th>
+            </tr>
+          </thead>
+          <tbody id="limits-body">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="batch-requests">
+        <h3>Batch requests</h3>
+        <p>Limit per minute across all models</p>
+        <span class="batch-limit">1,000</span>
+      </div>
+
+      <div class="custom-limits">
+        <div class="custom-limits-content">
+          <h3>CUSTOM LIMITS</h3>
+          <p>Contact the Anthropic accounts team to learn more about custom rate limits.</p>
+          <button class="contact-sales">Contact sales</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
